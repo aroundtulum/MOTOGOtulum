@@ -178,6 +178,13 @@ details[open] .faqq {
   }
   .grid5 {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .grid5 > div {
+    aspect-ratio: auto !important;
+    height: 96px !important;
+    padding: 18px 22px !important;
+    border-radius: 18px !important;
   }
   .h1 {
     font-size: 46px !important;
