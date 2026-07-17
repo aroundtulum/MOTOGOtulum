@@ -1,0 +1,208 @@
+:root {
+  --green: #0a211a;
+  --green-2: #08190f;
+  --olive: #9db088;
+  --cream: #f2ecde;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--green);
+  font-family: var(--font-space), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: opacity 0.18s ease;
+}
+a:hover {
+  opacity: 0.8;
+}
+img,
+svg {
+  display: block;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--green);
+  position: relative;
+  overflow: hidden;
+}
+
+/* FAQ acordeón nativo */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::marker {
+  content: '';
+}
+.faqicon {
+  transition: transform 0.2s ease;
+}
+details[open] .faqicon {
+  transform: rotate(45deg);
+}
+details[open] .faqq {
+  color: var(--olive) !important;
+}
+
+/* Menú hamburguesa (oculto en desktop) */
+.navtoggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+.navtoggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #f4efe4;
+  margin: 5px 0;
+  transition: 0.25s;
+}
+.navtoggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navtoggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.navtoggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+    padding-top: 56px !important;
+    text-align: center;
+  }
+  .hero .herocopy {
+    margin: 0 auto;
+  }
+  .btnrow,
+  .stats,
+  .hero .badge {
+    justify-content: center !important;
+  }
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid5 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .cov {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .appweb {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 32px !important;
+  }
+  .cathead {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .catright {
+    text-align: left !important;
+  }
+  .h1 {
+    font-size: 72px !important;
+  }
+  .h2 {
+    font-size: 46px !important;
+  }
+
+  .navtoggle {
+    display: block;
+  }
+  .navlinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0 !important;
+    align-items: stretch;
+    background: rgba(10, 33, 26, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(157, 176, 136, 0.14);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .navlinks a {
+    padding: 16px 22px;
+    border-top: 1px solid rgba(157, 176, 136, 0.1);
+  }
+  .navlinks.open {
+    max-height: 340px;
+  }
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 640px) {
+  .sec {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  .grid3 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid4 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .h1 {
+    font-size: 46px !important;
+  }
+  .h2 {
+    font-size: 32px !important;
+  }
+  .heroph {
+    width: 300px !important;
+    height: 620px !important;
+  }
+  .stats {
+    gap: 22px !important;
+  }
+  .footer {
+    flex-direction: column !important;
+    gap: 34px !important;
+  }
+  .footcols {
+    gap: 40px !important;
+  }
+  .navbrand span {
+    font-size: 22px !important;
+  }
+  .cov-map {
+    height: 400px !important;
+  }
+}
