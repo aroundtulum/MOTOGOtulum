@@ -292,11 +292,11 @@ export function Hero() {
 /* ===== TRUST STRIP ===== */
 export function TrustStrip() {
   const logos = [
-    ['/assets/logos/tacospapi-t.png', 'Tacos Papi', '38px', true],
-    ['/assets/logos/gusto-cut-t.png', 'Gusto', '34px', false],
-    ['/assets/logos/beacheladas-t.png', 'Beacheladas', '40px', true],
-    ['/assets/logos/nimai-t.png', 'Nimai', '36px', true],
-    ['/assets/logos/ginkgo-t.png', 'Sushi Lab', '34px', false],
+    ['/assets/logos/tacospapi-t.png', 'Tacos Papi', '30px'],
+    ['/assets/logos/gusto-cut-t.png', 'Gusto', '22px'],
+    ['/assets/logos/beacheladas-t.png', 'Beacheladas', '38px'],
+    ['/assets/logos/nimai-t.png', 'Nimai', '26px'],
+    ['/assets/logos/pechugon-tp.png', 'El Pechugón', '42px'],
   ];
   return (
     <div
@@ -326,22 +326,31 @@ export function TrustStrip() {
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '38px',
+          gap: '14px',
           flexWrap: 'wrap',
           justifyContent: 'center',
         }}
       >
-        {logos.map(([src, alt, h, white]) => (
-          <img
+        {logos.map(([src, alt, h]) => (
+          <div
             key={alt}
-            src={src}
-            alt={alt}
             style={{
-              height: h,
-              filter: white ? 'brightness(0) invert(1)' : 'none',
-              opacity: white ? 0.7 : 0.85,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: '#F2ECDE',
+              borderRadius: '12px',
+              padding: '12px 20px',
+              height: '58px',
+              minWidth: '96px',
             }}
-          />
+          >
+            <img
+              src={src}
+              alt={alt}
+              style={{ maxHeight: h, maxWidth: '120px', width: 'auto', objectFit: 'contain' }}
+            />
+          </div>
         ))}
       </div>
     </div>
