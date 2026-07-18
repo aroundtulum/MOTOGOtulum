@@ -493,7 +493,7 @@ export function Services() {
             textAlign: 'right',
           }}
         >
-          Si cabe en la moto, lo entregamos. Estos son los pedidos más comunes.
+          Si lo venden en Tulum, te lo llevamos. Estos son los pedidos más comunes.
         </p>
       </div>
       <div
