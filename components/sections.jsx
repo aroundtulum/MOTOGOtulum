@@ -79,7 +79,7 @@ export function Hero() {
           }}
         >
           Comida, súper, farmacia y cualquier mandado. Tú lo pides, nosotros lo
-          llevamos volando hasta tu puerta.
+          llevamos volando o en moto hasta tu puerta.
         </p>
         <div
           className="btnrow"
