@@ -361,8 +361,8 @@ export function TrustStrip() {
 export function HowItWorks() {
   const steps = [
     ['1', 'Escríbenos', 'Mándanos tu pedido por WhatsApp o llámanos. Dinos qué necesitas y de dónde.'],
-    ['2', 'Confirmamos', 'Te pasamos el total con el envío y el tiempo estimado. Tú apruebas y salimos.'],
-    ['3', 'Recíbelo', 'Tu moto llega en minutos. Paga en efectivo o transferencia al recibir.'],
+    ['2', 'Confirmamos', 'Te pasamos el total con el envío y el tiempo estimado. Tú apruebas, nos depositas y salimos.'],
+    ['3', 'Recíbelo', 'Tu moto llegará en el tiempo aprox indicado. Puedes pagar el servicio de envío en efectivo o transferencia al recibir.'],
   ];
   return (
     <section id="como" className="sec" style={{ background: '#F2ECDE', padding: '96px 72px' }}>
